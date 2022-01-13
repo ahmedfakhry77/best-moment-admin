@@ -2,9 +2,27 @@
 <template>
   <v-simple-table fixed-header height="400px">
     <template v-slot:default>
-      
       <tbody>
-        <tr v-for="item in table" :key="item.name">
+        <tr v-for="item in table1" :key="item.name">
+          <td>
+            {{ item.owner }}
+            <br />
+            <div>
+              <img
+                src="../assets/icon/location-arrow.png"
+                class="location-icon"
+              />
+              Makaah
+            </div>
+            <div>
+              <img src="../assets/icon/mcall.png" class="location-icon" />
+              +966 0225636855
+            </div>
+            <div>
+              <img src="../assets/icon/email.png" class="location-icon" />
+              Example.here@Example.Com
+            </div>
+          </td>
           <td>
             <v-img
               v-bind:src="require('../assets/images/' + item.photo)"
@@ -14,23 +32,16 @@
             ></v-img>
           </td>
           <td class="text-center">
-            <b> {{ $t('Code') }} </b>{{ item.code }} <br />
-            <div class="location">
-              <img
-                src="../assets/icon/location-arrow.png"
-                class="location-icon"
-              />
-              Makaah
-            </div>
-          </td>
-          <td class="text-center"><b> {{ $t('Owner') }} </b>{{ item.owner }}</td>
-          <td class="text-center">{{ item.calories }} complete</td>
-          <td class="text-center">
-            <v-btn depressed color="success" width="150" class="my-auto">
-              {{ item.name }}
-              <img src="../assets/icon/md-done-all.png" class="btn-photo" />
-            </v-btn>
+            <b> {{ $t('Code') }} </b>{{ item.code }}
             <img src="../assets/icon/eye-fill.png" class="eye" />
+            <img src="../assets/icon/options-sharp.png" class="eye" />
+          </td>
+
+          <td class="text-center">
+           
+          </td>
+          <td class="text-center">
+            
           </td>
         </tr>
       </tbody>
@@ -41,7 +52,7 @@
 export default {
   data() {
     return {
-      table: [
+      table1: [
         {
           name: "Published",
           calories: "50%",

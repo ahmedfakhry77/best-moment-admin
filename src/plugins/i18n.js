@@ -23,6 +23,12 @@ const messages = {
     UsersServiceProvider: "Users & Service Provider",
     AllProviders: "All Providers",
     Users: "Users",
+    Accept: "Accept",
+    Reject: "Reject",
+    Code: "Code :",
+    Owner: "Owner :",
+    ReasonofRefuse: "Reason of Refuse",
+    Reason: "Pictures are not appropriate and not all information is written",
 
   },
   ar: {
@@ -44,6 +50,13 @@ const messages = {
     UsersServiceProvider: "العملاء و مزودين خدمة العملاء",
     AllProviders: "جميع مزودين الخدمة",
     Users: "العملاء",
+    Accept: "قبول",
+    Reject: "رفض",
+    Code: "الكود :",
+    Owner: "صاحب المنشأة :",
+    ReasonofRefuse: "سبب الرفض",
+    Reason: "الصور غير مناسبة ولم يتم  كتابة كافة المعلومات",
+
   },
 };
 

@@ -10,24 +10,40 @@
 
         <template v-slot:extension>
           <v-tabs >
-            <v-tab>{{ $t('NewRequests') }}</v-tab>
-            <v-tab>{{ $t('OnHold') }}</v-tab>
-            <v-tab>{{ $t('WaitingToReview') }}</v-tab>
+            <v-tab @click="activetab = '1'">{{ $t('NewRequests') }}</v-tab>
+            <v-tab @click="activetab = '2'">{{ $t('OnHold') }}</v-tab>
+            <v-tab @click="activetab = '3'">{{ $t('WaitingToReview') }}</v-tab>
           </v-tabs>
         </template>
       </v-app-bar>
     </v-card>
-    <div class="table-home">
+    <div class="table-home" v-if= "activetab === '1'">
       <Admission />
+    </div>
+    <div class="table-home" v-if= "activetab === '2'">
+      <OnHold />
+    </div>
+    <div class="table-home" v-if= "activetab === '3'">
+     <WaitingToReview />
     </div>
   </div>
 </template>
 
 <script>
 import Admission from '../components/Admission'
+import OnHold from '../components/OnHold'
+import WaitingToReview from '../components/WaitingToReview'
+
 export default {
   name: "AdmissionList",
-  components: { Admission},
+  data () {
+    return {
+      activetab: '1'
+    }
+  },
+  components: { 
+    Admission , OnHold , WaitingToReview
+    },
 };
 </script>
 <style>

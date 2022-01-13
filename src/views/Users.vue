@@ -10,25 +10,39 @@
 
         <template v-slot:extension>
           <v-tabs >
-            <v-tab>{{ $t('AllProviders') }}</v-tab>
-            <v-tab>{{ $t('Users') }}</v-tab>
-            <v-tab>{{ $t('Blacklist') }}</v-tab>
+            <v-tab @click="activetab = '1'">{{ $t('AllProviders') }}</v-tab>
+            <v-tab @click="activetab = '2'">{{ $t('Users') }}</v-tab>
+            <v-tab @click="activetab = '3'">{{ $t('Blacklist') }}</v-tab>
           </v-tabs>
         </template>
       </v-app-bar>
     </v-card>
-    <div class="table-home">
-      <Allrestbuildings />
+    <div class="table-home" v-if= "activetab === '1'">
+      <AllProviders />
+    </div>
+    <div class="table-home" v-if= "activetab === '2'">
+      <user />
+    </div>
+    <div class="table-home" v-if= "activetab === '3'">
+     
     </div>
   </div>
 </template>
 
 <script>
-import Allrestbuildings from '../components/Allrestbuildings'
+import AllProviders from '../components/AllProviders'
+import user from '../components/user'
+
+
 export default {
   name: "Users",
+  data () {
+    return {
+      activetab: '1',
+    }
+  },
   components: {
-    Allrestbuildings,
+    AllProviders , user
   },
 };
 </script>
