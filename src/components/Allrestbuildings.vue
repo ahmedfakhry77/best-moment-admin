@@ -4,7 +4,7 @@
     <template v-slot:default>
       
       <tbody>
-        <tr v-for="item in desserts" :key="item.name">
+        <tr v-for="item in table" :key="item.name">
           <td>
             <v-img
               v-bind:src="require('../assets/images/' + item.photo)"
@@ -41,7 +41,7 @@
 export default {
   data() {
     return {
-      desserts: [
+      table: [
         {
           name: "Published",
           calories: "50%",

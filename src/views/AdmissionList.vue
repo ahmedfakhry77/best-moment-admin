@@ -17,13 +17,17 @@
         </template>
       </v-app-bar>
     </v-card>
+    <div class="table-home">
+      <Admission />
+    </div>
   </div>
 </template>
 
 <script>
+import Admission from '../components/Admission'
 export default {
   name: "AdmissionList",
-  components: {},
+  components: { Admission},
 };
 </script>
 <style>

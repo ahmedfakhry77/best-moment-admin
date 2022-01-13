@@ -4,7 +4,31 @@
     <template v-slot:default>
       
       <tbody>
-        <tr v-for="item in desserts" :key="item.name">
+        <tr v-for="item in table1" :key="item.name">
+        <td >{{ item.owner }}
+        <br />
+            <div >
+              <img
+                src="../assets/icon/location-arrow.png"
+                class="location-icon"
+              />
+              Makaah
+            </div>
+            <div >
+              <img
+                src="../assets/icon/mcall.png"
+                
+              />
+              +966 0225636855
+            </div>
+            <div >
+              <img
+                src="../assets/icon/email.png"
+               
+              />
+              Example.here@Example.Com
+            </div>
+        </td>
           <td>
             <v-img
               v-bind:src="require('../assets/images/' + item.photo)"
@@ -14,23 +38,21 @@
             ></v-img>
           </td>
           <td class="text-center">
-            <b> Code: </b>{{ item.code }} <br />
-            <div class="location">
-              <img
-                src="../assets/icon/location-arrow.png"
-                class="location-icon"
-              />
-              Makaah
-            </div>
-          </td>
-          <td class="text-center"><b> Owner: </b>{{ item.owner }}</td>
-          <td class="text-center">{{ item.calories }} complete</td>
-          <td class="text-center">
-            <v-btn depressed color="success" width="150" class="my-auto">
-              {{ item.name }}
-              <img src="../assets/icon/md-done-all.png" class="btn-photo" />
-            </v-btn>
+            <b> Code: </b>{{ item.code }} 
             <img src="../assets/icon/eye-fill.png" class="eye" />
+          </td>
+          
+         <td class="text-center">
+            <v-btn depressed color="success" width="150" class="my-auto">
+              Accept
+              
+            </v-btn>
+          </td>
+          <td class="text-center">
+            <v-btn depressed color="error" width="150" class="my-auto">
+              Reject
+              
+            </v-btn>
           </td>
         </tr>
       </tbody>
@@ -41,7 +63,7 @@
 export default {
   data() {
     return {
-      desserts: [
+      table1: [
         {
           name: "Published",
           calories: "50%",
