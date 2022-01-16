@@ -6,24 +6,32 @@
       </h2>
     </header>
     <div class="card-container">
-      <v-card class="mx-10 card-of" >
+    <v-row>
+    <v-col xs="12" sm="12" md="4">
+     <v-card class="mx-10 card-of" >
         <v-img src="../assets/icon/contact.png"> </v-img>
         <v-card-text>
           <div>{{ $t("TermsandConditions") }}</div>
         </v-card-text>
       </v-card>
-      <v-card class="mx-10 card-of" >
+    </v-col>
+    <v-col xs="12" sm="12" md="4">
+     <v-card class="mx-10 card-of" >
         <v-img src="../assets/icon/about-us.png"> </v-img>
         <v-card-text>
           <div>{{ $t("Aboutus") }}</div>
         </v-card-text>
       </v-card>
-      <v-card class="mx-10 card-of" >
+    </v-col>
+    <v-col xs="12" sm="12" md="4">
+     <v-card class="mx-10 card-of" >
         <v-img src="../assets/icon/call.png" > </v-img>
         <v-card-text>
           <div>{{ $t("ContactUs") }}</div>
         </v-card-text>
       </v-card>
+    </v-col>
+    </v-row>      
     </div>
   </div>
 </template>
@@ -49,15 +57,9 @@ export default {
   margin-bottom: 40px;
   padding: 20px;
 }
-.card-container {
- display: flex ;
- flex-direction: row;
- justify-content: flex-start;
- margin-right: 90px;
- margin-left: 90px;
-}
+
 .card-of {
-width: 250px;
+max-width: 250px;
 padding: 30px;
 border-radius: 20px;
 cursor: pointer;

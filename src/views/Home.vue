@@ -1,11 +1,14 @@
 <template>
-  <div class="root-home" width="100%" height="200">
-    <v-card flat max-width="100%" tile>
-      <v-app-bar class="home" flat color="#F9F9F9" height="150">
-        <v-app-bar-title>
-          <h2>{{ $t("RestBuildings") }}</h2></v-app-bar-title
-        >
-            <HomeDash />
+  <div class="root-home" width="100%" height="100%">
+   <v-row justify="end " class="dshome">
+    <v-col sm="12" md="6">
+         <HomeDash />
+        </v-col>
+   </v-row>
+      <v-app-bar  flat color="#F9F9F9" height="100%" class="home">
+         <v-app-bar-title>
+          <h2>{{ $t("RestBuildings") }}</h2>
+        </v-app-bar-title>        
         <template v-slot:extension>
           <v-tabs>
             <v-tab class="test" @click="activetab = '1'">{{
@@ -19,7 +22,6 @@
           </v-tabs>
         </template>
       </v-app-bar>
-    </v-card>
     <div class="table-home" v-if="activetab === '1'">
       <Allrestbuildings />
     </div>
@@ -64,15 +66,16 @@ export default {
 .test {
   font-family: "Tajawal";
 }
-.root-home {
-  margin: 0;
-}
+
 h2 {
   width: 300px;
 }
 .home {
-  padding-right: 90px;
-  padding-left: 90px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+.dshome {
+ background-color: #f9f9f9;
 }
 .table-home {
   padding-right: 40px;

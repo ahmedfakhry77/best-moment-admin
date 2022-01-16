@@ -3,7 +3,7 @@
     <v-app-bar app flat color="#F9F9F9" height="100" class="headetr">
       <v-toolbar flat color="#F9F9F9">
         <v-row>
-          <v-col cols="8">
+          <v-col  md="9" sm="6" xl="10">
             <v-text-field
               solo
               width="100%"
@@ -12,7 +12,8 @@
             >
             </v-text-field>
           </v-col>
-          <v-col cols="4">
+          <v-spacer></v-spacer>
+          <v-col  md="3" sm="6" xl="2">
             <div class="app-flag">
               <v-img
                 src="./assets/icon/app-switcher.png"
@@ -161,13 +162,11 @@ export default {
       i18n.locale = locale;
     },
     changeDir() {
-      var x = document.getElementById("nm");
-      x.style.direction = "rtl";
+      this.$vuetify.rtl = true;
       this.arabic = !this.arabic;
     },
     changeDil() {
-      var x = document.getElementById("nm");
-      x.style.direction = "ltr";
+      this.$vuetify.rtl = false;
       this.arabic = !this.arabic;
     },
   },
