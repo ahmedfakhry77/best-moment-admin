@@ -7,6 +7,11 @@ const messages = {
   en: {
     RestBuildings: "Rest Buildings",
     Allrestbuildings: "All rest buildings",
+    Providers: "Providers",
+    Downloading: " Downloading",
+    Rests: "Rests ",
+    Difference: "Difference",
+    Userno: "Users NO.",
     Reserved: "Reserved",
     Available: "Available",
     PrivateReservations: "Private Reservations",
@@ -34,6 +39,11 @@ const messages = {
   ar: {
     RestBuildings: "الإستراحات",
     Allrestbuildings: "كافة مباني الإستراحات",
+    Providers: " مزودين الخدمة",
+    Downloading: "عدد التنزيلات",
+    Rests: "عدد الاستراحات",
+    Difference: "الفرق",
+    Userno: "عدد العملاء",
     Reserved: "المحجوزة",
     Available: "المتاحة",
     PrivateReservations: "الحجوزات الخاصة",

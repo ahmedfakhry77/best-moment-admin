@@ -59,6 +59,7 @@ export default {
 .card-of {
 width: 250px;
 padding: 30px;
-border-radius: 15%;
+border-radius: 20px;
+cursor: pointer;
 }
 </style>

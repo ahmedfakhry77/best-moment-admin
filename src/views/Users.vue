@@ -1,7 +1,7 @@
 <template>
-  <div class="root-Users " color="#F9F9F9" width="100%" height="200">
-    <v-card flat max-width="1450px" tile  >
-      <v-app-bar class="Users" height="150">
+  <div class="root-Users " width="100%" height="200">
+    <v-card flat max-width="100%" tile  >
+      <v-app-bar class="Users" height="150"  color="#F9F9F9" flat>
         <v-app-bar-title>
         <h2>
         {{ $t('UsersServiceProvider') }}
@@ -24,7 +24,7 @@
       <user />
     </div>
     <div class="table-home" v-if= "activetab === '3'">
-     
+     <blacklist />
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@
 <script>
 import AllProviders from '../components/AllProviders'
 import user from '../components/user'
+import blacklist from '../components/blacklist'
 
 
 export default {
@@ -42,7 +43,7 @@ export default {
     }
   },
   components: {
-    AllProviders , user
+    AllProviders , user ,blacklist
   },
 };
 </script>

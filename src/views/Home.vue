@@ -1,39 +1,50 @@
 <template>
   <div class="root-home" width="100%" height="200">
-    <v-card flat max-width="1450px" tile>
+    <v-card flat max-width="100%" tile>
       <v-app-bar class="home" flat color="#F9F9F9" height="150">
         <v-app-bar-title>
           <h2>{{ $t("RestBuildings") }}</h2></v-app-bar-title
         >
-
+            <HomeDash />
         <template v-slot:extension>
           <v-tabs>
-            <v-tab class="test">{{ $t("Allrestbuildings") }}</v-tab>
+            <v-tab class="test" @click="activetab = '1'">{{
+              $t("Allrestbuildings")
+            }}</v-tab>
             <v-tab>{{ $t("Reserved") }}</v-tab>
             <v-tab>{{ $t("Available") }}</v-tab>
             <v-tab>{{ $t("PrivateReservations") }}</v-tab>
-            <v-tab>{{ $t("Blacklist") }}</v-tab>
+            <v-tab @click="activetab = '2'">{{ $t("Blacklist") }}</v-tab>
             <v-tab>{{ $t("Draft") }}</v-tab>
           </v-tabs>
         </template>
       </v-app-bar>
     </v-card>
-    <div class="table-home">
+    <div class="table-home" v-if="activetab === '1'">
       <Allrestbuildings />
+    </div>
+    <div class="table-home" v-if="activetab === '2'">
+      <blacklist />
     </div>
   </div>
 </template>
 
 <script>
-import Allrestbuildings from '../components/Allrestbuildings'
+import Allrestbuildings from "../components/Allrestbuildings";
+import blacklist from "../components/blacklist";
+import HomeDash from "../components/HomeDash";
+
 export default {
   name: "Home",
   data() {
     return {
-    }
+      activetab: "1",
+    };
   },
   components: {
     Allrestbuildings,
+    blacklist,
+    HomeDash,
   },
 };
 </script>
@@ -54,7 +65,7 @@ export default {
   font-family: "Tajawal";
 }
 .root-home {
-  margin: -30px;
+  margin: 0;
 }
 h2 {
   width: 300px;
@@ -66,7 +77,7 @@ h2 {
 .table-home {
   padding-right: 40px;
   padding-left: 40px;
-  width: 1300px;
+  width: 100%;
   margin-top: 15px;
 }
 .table-photo {
@@ -88,9 +99,10 @@ h2 {
   margin: 5px;
 }
 .eye {
- width: 25px;
- 
- margin-right: 25px;
- margin-left: 25px;
+  width: 25px;
+
+  margin-right: 25px;
+  margin-left: 25px;
 }
+
 </style>
