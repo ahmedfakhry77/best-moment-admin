@@ -56,7 +56,7 @@ export default {
   margin: -20px;
 }
 .AdmissionList {
-  padding-right: 90px;
-  padding-left: 90px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 </style>

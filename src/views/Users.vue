@@ -56,8 +56,8 @@ font-family:'Leelawadee';
 
 }
 .Users {
-padding-right: 90px;
-padding-left: 90px;
+padding-right: 40px;
+padding-left: 40px;
 
 }
 </style>

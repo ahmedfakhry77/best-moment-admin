@@ -68,6 +68,7 @@
     <v-navigation-drawer
       v-model="drawer"
       app
+      :right="right"
       color="#2EB3CA"
       mini-variant
       class="aside"
@@ -154,6 +155,7 @@ export default {
     return {
       arabic: true,
       drawer: null,
+      right: null,
       alignments: ["start", "center", "end"],
     };
   },
@@ -163,10 +165,12 @@ export default {
     },
     changeDir() {
       this.$vuetify.rtl = true;
+      this.right = true;
       this.arabic = !this.arabic;
     },
     changeDil() {
       this.$vuetify.rtl = false;
+      this.right = false;
       this.arabic = !this.arabic;
     },
   },

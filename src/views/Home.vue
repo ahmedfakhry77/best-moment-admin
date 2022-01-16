@@ -78,8 +78,8 @@ h2 {
  background-color: #f9f9f9;
 }
 .table-home {
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 15px;
+  padding-left: 15px;
   width: 100%;
   margin-top: 15px;
 }
