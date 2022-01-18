@@ -17,6 +17,9 @@
         </template>
       </v-app-bar>
     </v-card>
+    <div class="table-home">
+      <searchWithFilter />
+    </div>
     <div class="table-home" v-if="activetab === '1'">
       <Admission />
     </div>
@@ -33,7 +36,7 @@
 import Admission from "../components/Admission";
 import OnHold from "../components/OnHold";
 import WaitingToReview from "../components/WaitingToReview";
-
+import searchWithFilter from "../components/searchWithFilter";
 export default {
   name: "AdmissionList",
   data() {
@@ -45,6 +48,7 @@ export default {
     Admission,
     OnHold,
     WaitingToReview,
+    searchWithFilter,
   },
 };
 </script>

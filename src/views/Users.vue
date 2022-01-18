@@ -17,6 +17,9 @@
         </template>
       </v-app-bar>
     </v-card>
+    <div class="table-home">
+      <searchWithFilter />
+    </div>
     <div class="table-home" v-if= "activetab === '1'">
       <AllProviders />
     </div>
@@ -33,7 +36,7 @@
 import AllProviders from '../components/AllProviders'
 import user from '../components/user'
 import blacklist from '../components/blacklist'
-
+import searchWithFilter from "../components/searchWithFilter";
 
 export default {
   name: "Users",
@@ -43,7 +46,7 @@ export default {
     }
   },
   components: {
-    AllProviders , user ,blacklist
+    AllProviders , user ,blacklist, searchWithFilter,
   },
 };
 </script>

@@ -153,9 +153,9 @@ export default {
   components: {},
   data() {
     return {
-      arabic: true,
+      arabic: false,
       drawer: null,
-      right: null,
+      right: true,
       alignments: ["start", "center", "end"],
     };
   },

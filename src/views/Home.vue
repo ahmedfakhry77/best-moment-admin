@@ -22,6 +22,9 @@
           </v-tabs>
         </template>
       </v-app-bar>
+      <div class="table-home">
+      <searchWithFilter />
+    </div>
     <div class="table-home" v-if="activetab === '1'">
       <Allrestbuildings />
     </div>
@@ -35,6 +38,7 @@
 import Allrestbuildings from "../components/Allrestbuildings";
 import blacklist from "../components/blacklist";
 import HomeDash from "../components/HomeDash";
+import searchWithFilter from "../components/searchWithFilter";
 
 export default {
   name: "Home",
@@ -47,6 +51,7 @@ export default {
     Allrestbuildings,
     blacklist,
     HomeDash,
+    searchWithFilter,
   },
 };
 </script>
